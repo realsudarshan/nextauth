@@ -1,9 +1,10 @@
 
-import {connect} from '/workspaces/codespaces-blank/my-app/src/dbconfig/dbconfig.js'
-import User from '/workspaces/codespaces-blank/my-app/src/models/userModel.js'
+import {connect} from '@/dbconfig/dbconfig.js'
+import User from '@/models/userModel.js'
 import bcryptjs from 'bcrypt'
-import {sendEmail} from '/workspaces/codespaces-blank/my-app/src/helper/mailer.js'
+import {sendEmail} from '@/helper/mailer.js'
 import { NextResponse } from 'next/server';
+import jwt from "jsonwebtoken";
 connect();
 export async function POST(req){
 try{
