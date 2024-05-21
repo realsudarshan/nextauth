@@ -1,4 +1,4 @@
-import User from '/workspaces/codespaces-blank/my-app/src/models/userModel.js';
+import User from '@/models/userModel.js';
 import nodemailer from 'nodemailer'
 import bcryptjs from 'bcrypt'
 export const sendEmail = async ({ email, emailType, userId }) => {
