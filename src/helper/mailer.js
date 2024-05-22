@@ -23,12 +23,11 @@ export const sendEmail = async ({ email, emailType, userId }) => {
 
 
      const transport = nodemailer.createTransport({
-      host: "live.smtp.mailtrap.io",
-      port: 587,
-      auth: {
-        user: "api",
-        pass: "b02fe93a1da67d2b8a9a8ce866b383e5"
-      }
+    host: 'smtp.ethereal.email',
+    port: 587,
+    auth: {
+        user: 'amber.gutkowski@ethereal.email',
+        pass: 'NqdS5JQBCz82b63uCe'
     });
       
         const mailOptions =
