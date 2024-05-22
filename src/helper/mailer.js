@@ -23,17 +23,15 @@ export const sendEmail = async ({ email, emailType, userId }) => {
 
 
      const transport = nodemailer.createTransport({
-      host: "smtp.ethereal.email",
-      port: 587,
-      secure: false,
+      service:'gmail',
     auth: {
-        user: 'amber.gutkowski@ethereal.email',
-        pass: 'NqdS5JQBCz82b63uCe'
+        user: 'code63650@gmail.com',
+        pass: 'hyrnnmfwumfqrhvr'
     }});
       
         const mailOptions =
         {
-          from: 'sudarshan@ethereal.com', // sender address
+          from: 'code63650@gmail.com', // sender address
           to: email, // list of receivers
           subject: emailType === "VERIFY" ? "Verify your email" : "Reset your password", // Subject line
           html: `<p>Click <a href="${process.env.DOMAIN_NAME}/verifyemail?token=${hashedToken}">here</a> to ${emailType === "VERIFY" ? "verify your email" : "reset your password"}
