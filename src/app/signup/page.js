@@ -47,7 +47,7 @@ export default function SignupPage() {
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
         <h1>{loading ? "Processing" : "Signup"}</h1>
         <hr />
-    <h1>{process.env.DOMAIN_NAME}</h1>
+    <h1>{process.env.NEXT_PUBLIC_DOMAIN_NAME}</h1>
     <h1>Is it working fine?</h1>
         <label htmlFor="username">username</label>
         <input 
