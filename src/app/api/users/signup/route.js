@@ -10,7 +10,7 @@ export async function POST(req){
 try{
 const reqBody=await req.json()
 const{username,email,password}=reqBody;
-console.log('Environment Variable:', process.env.customKey);
+console.log('Environment Variable:', process.env.NEXT_PUBLIC_TOKEN_SECRET);
 //validation
 console.log(reqBody);
 const user = await User.findOne({email})
