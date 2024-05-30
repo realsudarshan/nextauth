@@ -3,6 +3,7 @@ import nodemailer from 'nodemailer'
 import bcryptjs from 'bcrypt'
 export const sendEmail = async ({ email, emailType, userId }) => {
   console.log("Entered in function");
+  console.log(email,emailType,userId);
   try {
     const hashedToken = await bcryptjs.hash(userId.toString(), 10);
     if (emailType == "VERIFY") {
