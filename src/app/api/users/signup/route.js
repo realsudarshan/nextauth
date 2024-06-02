@@ -24,7 +24,7 @@ const user = await User.findOne({email})
     })
     const savedUser=await newUser.save()
   console.log("Entering to function");
-    sendEmail({email,emailType:"VERIFY",userId:savedUser._id})   
+    await sendEmail({email,emailType:"VERIFY",userId:savedUser._id})   
     //send verification email
 return NextResponse.json({
     message:"Sucessfull",
