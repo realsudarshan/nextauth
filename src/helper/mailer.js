@@ -2,18 +2,14 @@ import User from '@/models/userModel.js';
 import nodemailer from 'nodemailer'
 import bcryptjs from 'bcrypt'
 export const sendEmail = async ({ email, emailType, userId }) => {
-  console.log("Entered in function");
-  console.log(email,emailType,userId);
   try {
     const hashedToken = await bcryptjs.hash(userId.toString(), 10);
     console.log(hashedToken);
     if (emailType == "VERIFY") {
-      console.log("we are checking");
       const test=await User.findByIdAndUpdate(userId, {
         $set:
           { verifyToken: hashedToken, verifyTokenExpiry: Date.now() + 3600000 }
       });
-      console.log(test);
     }
     else if (emailType === "RESET") {
       await User.findByIdAndUpdate(userId,
@@ -23,7 +19,6 @@ export const sendEmail = async ({ email, emailType, userId }) => {
         }
       )
     }
-     console.log(User)
 
 
 
@@ -31,7 +26,7 @@ export const sendEmail = async ({ email, emailType, userId }) => {
   service: 'gmail',
   auth: {
     user: 'code63650@gmail.com',
-    pass: 'tzpa yxko qkdj vvle'
+    pass: process.env.MAIL_PASSWORD
   }
 });
   
