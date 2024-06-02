@@ -9,7 +9,6 @@ import { toast } from "react-hot-toast";
 
 
 export default function SignupPage() {
-    const myVariable = process.env.NEXT_PUBLIC_DOMAIN_NAME;
     const router = useRouter();
     const [user, setUser] = React.useState({
         email: "",
@@ -48,8 +47,7 @@ export default function SignupPage() {
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
         <h1>{loading ? "Processing" : "Signup"}</h1>
         <hr />
-    <h1>{myVariable}</h1>
-    <h1>Is it working fine?</h1>
+
         <label htmlFor="username">username</label>
         <input 
         className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"

@@ -26,7 +26,7 @@ export const sendEmail = async ({ email, emailType, userId }) => {
   service: 'gmail',
   auth: {
     user: 'code63650@gmail.com',
-    pass: process.env.MAIL_PASSWORD
+    pass: process.env.NEXT_PUBLIC_MAIL_PASSWORD
   }
 });
   
