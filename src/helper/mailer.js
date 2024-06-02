@@ -29,7 +29,7 @@ export const sendEmail = async ({ email, emailType, userId }) => {
     pass: process.env.NEXT_PUBLIC_MAIL_PASSWORD
   }
 });
-  
+  //email send
       
         const mailOptions =
         {
