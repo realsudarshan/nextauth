@@ -1,7 +1,18 @@
-import Image from "next/image";
+"use client"
+ import toast from "react-hot-toast"
 
-export default function Home() {
-  return (
-    <h1>hello</h1>
-  );
-}
+
+ export default function ToastDestructive() {
+return(<h1>Home page</h1>)
+
+  
+    
+     
+
+  
+    }
+
+    
+    
+    
+    
